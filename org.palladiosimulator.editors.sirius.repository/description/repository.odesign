@@ -10,6 +10,7 @@
       <metamodel href="http://palladiosimulator.org/PalladioComponentModel/5.2#//core"/>
       <metamodel href="http://palladiosimulator.org/PalladioComponentModel/5.2#//core/entity"/>
       <metamodel href="http://palladiosimulator.org/PalladioComponentModel/5.2#//resourcetype"/>
+      <metamodel href="http://www.palladiosimulator.org/pcm/dataspec/repository/0.1/#/"/>
       <diagramInitialisation>
         <firstModelOperations xsi:type="tool:ExternalJavaAction" name="Load Resources" id="LoadResources">
           <parameters name="PrimitiveTypes.repository" value="aql:'pathmap://PCM_MODELS/PrimitiveTypes.repository'"/>
@@ -201,6 +202,14 @@
         </containerMappings>
         <containerMappings name="SubSystem" labelDirectEdit="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Name']" semanticCandidatesExpression="feature:components__Repository" doubleClickDescription="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='SubSystem%20Representation']" domainClass="subsystem.SubSystem" childrenPresentation="List">
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql: '&lt;&lt;SubSystem>>\n'.concat(self.entityName)" widthComputationExpression="10" heightComputationExpression="5">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="DataPortSpecification" semanticCandidatesExpression="feature:interfaces__Repository" domainClass="repository::DataPortSpecification" childrenPresentation="VerticalStack">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql: '&lt;&lt;DataPortSpecification>>\n'.concat(self.entityName)">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -557,6 +566,17 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool:If" conditionExpression="service:self.isJavaIdentifier(0)">
                 <subModelOperations xsi:type="tool:SetValue" featureName="entityName" valueExpression="var:0"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:ContainerCreationDescription" name="DataPortSpecification" containerMappings="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@containerMappings[name='DataPortSpecification']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="repository::DataPortSpecification" referenceName="interfaces__Repository">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="entityName" valueExpression="aql:'DataPortSpecification' + container.eAllContents()->filter(repository::DataPortSpecification)->size()"/>
+                </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

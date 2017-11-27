@@ -13,7 +13,9 @@ Require-Bundle: org.eclipse.ui,
  org.palladiosimulator.editors.sirius.ui;bundle-version="1.0.1",
  org.eclipse.emf.transaction,
  org.palladiosimulator.commons,
- org.eclipse.emf.ecore
+ org.eclipse.emf.ecore,
+ org.palladiosimulator.dataspec;bundle-version="0.1.0",
+ org.palladiosimulator.pcm.dataspec;bundle-version="0.1.0"
 Bundle-ActivationPolicy: lazy
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-Vendor: palladiosimulator.org

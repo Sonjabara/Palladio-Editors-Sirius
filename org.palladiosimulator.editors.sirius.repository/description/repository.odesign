@@ -51,6 +51,14 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="DataPortProvidedRole" sourceMapping="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@containerMappings[name='BasicComponent'] //@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@containerMappings[name='CompositeComponent']" targetMapping="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@containerMappings[name='DataPortSpecification']" targetFinderExpression="feature:portSpecification" sourceFinderExpression="feature:providingEntity_ProvidedRole" domainClass="repository::DataPort" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelExpression="DataPort">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <containerMappings name="Interface" deletionDescription="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='OperationInterface%20Deletion']" labelDirectEdit="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Name']" semanticCandidatesExpression="feature:interfaces__Repository" domainClass="repository.OperationInterface" childrenPresentation="List">
           <subNodeMappings name="OperationSignature" labelDirectEdit="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Edit%20Signature']" semanticCandidatesExpression="feature:signatures__OperationInterface" domainClass="repository.OperationSignature">
             <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql:'void ' + self.entityName + '(' + self.printParameters() + ')'" labelPosition="node" resizeKind="NSEW">

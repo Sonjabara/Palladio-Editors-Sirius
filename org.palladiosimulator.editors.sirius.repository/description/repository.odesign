@@ -52,7 +52,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="DataPortProvidedRole" sourceMapping="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@containerMappings[name='BasicComponent'] //@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@containerMappings[name='CompositeComponent']" targetMapping="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@containerMappings[name='DataPortSpecification']" targetFinderExpression="feature:portSpecification" sourceFinderExpression="feature:providingEntity_ProvidedRole" domainClass="repository::DataPort" useDomainElement="true">
-          <style sizeComputationExpression="2">
+          <style>
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription labelExpression="DataPort">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -602,6 +602,20 @@
               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
                 <subModelOperations xsi:type="tool:CreateInstance" typeName="repository::DataPortSpecification" referenceName="interfaces__Repository">
                   <subModelOperations xsi:type="tool:SetValue" featureName="entityName" valueExpression="aql:'DataPortSpecification' + container.eAllContents()->filter(repository::DataPortSpecification)->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool_1:EdgeCreationDescription" name="DataPortProvidedRole" edgeMappings="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@edgeMappings[name='DataPortProvidedRole']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool:CreateInstance" typeName="repository::DataPort" referenceName="providedRoles_InterfaceProvidingEntity">
+                  <subModelOperations xsi:type="tool:SetValue" featureName="portSpecification" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool:SetValue" featureName="entityName" valueExpression="aql:'DataPortProvidedRole' + source.eContents()->filter(repository::DataPort)->size()"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>

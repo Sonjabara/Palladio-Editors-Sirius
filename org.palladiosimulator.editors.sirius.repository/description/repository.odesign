@@ -209,6 +209,24 @@
           </style>
         </containerMappings>
         <containerMappings name="DataPortSpecification" semanticCandidatesExpression="feature:interfaces__Repository" domainClass="repository::DataPortSpecification" childrenPresentation="VerticalStack">
+          <subContainerMappings name="InboundCompartment" semanticCandidatesExpression="var:self" domainClass="repository::DataPortSpecification">
+            <subNodeMappings name="Inbound" semanticCandidatesExpression="feature:inboundSpecification" domainClass="repository::DataPortSpecification"/>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="Inbound">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="OutboundCompartment" semanticCandidatesExpression="var:self" domainClass="repository::DataPortSpecification">
+            <subNodeMappings name="Outbound" semanticCandidatesExpression="feature:outboundSpecification" domainClass="repository::DataPortSpecification"/>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="Outbound">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql: '&lt;&lt;DataPortSpecification>>\n'.concat(self.entityName)">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>

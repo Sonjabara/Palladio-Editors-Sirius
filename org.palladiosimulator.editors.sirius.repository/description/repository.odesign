@@ -52,7 +52,7 @@
           </style>
         </edgeMappings>
         <edgeMappings name="DataPortProvidedRole" sourceMapping="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@containerMappings[name='BasicComponent'] //@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@containerMappings[name='CompositeComponent']" targetMapping="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@containerMappings[name='DataPortSpecification']" targetFinderExpression="feature:portSpecification" sourceFinderExpression="feature:providingEntity_ProvidedRole" domainClass="repository::DataPort" useDomainElement="true" reconnections="//@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DataPortProvidedRole´s%20Target'] //@ownedViewpoints[name='Repository']/@ownedRepresentations[name='Repository%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='DataPortProvidedRole´s%20Source']">
-          <style sourceArrow="OutputClosedArrow" targetArrow="InputClosedArrow">
+          <style routingStyle="tree">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="&lt;&lt;DataPort>>">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1237,7 +1237,7 @@
           </style>
         </containerMappings>
         <containerMappings name="CollectionDataSpecification" semanticCandidatesExpression="feature:dataTypes__Repository" domainClass="repository::CollectionDataSpecification" childrenPresentation="List">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="&lt;&lt;CollectionDataSpecification>>" widthComputationExpression="10" heightComputationExpression="5">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql: '&lt;&lt;CollectionDataSpecification>>\n'.concat(self.id)" widthComputationExpression="10" heightComputationExpression="5">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -1245,7 +1245,7 @@
           </style>
         </containerMappings>
         <containerMappings name="CompositionDataSpecification" semanticCandidatesExpression="feature:dataTypes__Repository" domainClass="repository::CompositionDataSpecification" childrenPresentation="List">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="&lt;&lt;CompositionDataSpecification>>">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql: '&lt;&lt;CompositionDataSpecification>>\n'.concat(self.id)">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -1253,7 +1253,7 @@
           </style>
         </containerMappings>
         <containerMappings name="SimpleDataSpecification" semanticCandidatesExpression="feature:dataTypes__Repository" domainClass="repository::SimpleDataSpecification" childrenPresentation="List">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="&lt;&lt;SimpleDataSpecification>>">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="aql: '&lt;&lt;SimpleDataSpecification>>\n'.concat(self.id)">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>

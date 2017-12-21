@@ -220,7 +220,7 @@
           <subContainerMappings name="InboundCompartment" semanticCandidatesExpression="var:self" domainClass="repository::DataPortSpecification" childrenPresentation="List">
             <subNodeMappings name="Inbound" semanticCandidatesExpression="feature:inboundDataType" domainClass="repository::DataType">
               <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(repository::PrimitiveDataType)">
-                <style xsi:type="style:SquareDescription" labelExpression="aql:self.oclAsType(repository::PrimitiveDataType).type.toString()" labelPosition="node" resizeKind="NSEW">
+                <style xsi:type="style:SquareDescription" labelExpression="aql:self.oclAsType(repository::PrimitiveDataType).type.toString().toLower()" labelPosition="node" resizeKind="NSEW">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -244,7 +244,7 @@
           <subContainerMappings name="OutboundCompartment" semanticCandidatesExpression="var:self" domainClass="repository::DataPortSpecification" childrenPresentation="List">
             <subNodeMappings name="Outbound" semanticCandidatesExpression="feature:outboundDataType" domainClass="repository.DataType">
               <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(repository::PrimitiveDataType)">
-                <style xsi:type="style:SquareDescription" labelExpression="aql:self.oclAsType(repository::PrimitiveDataType).type.toString()" labelPosition="node" resizeKind="NSEW">
+                <style xsi:type="style:SquareDescription" labelExpression="aql:self.oclAsType(repository::PrimitiveDataType).type.toString().toLower()" labelPosition="node" resizeKind="NSEW">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>

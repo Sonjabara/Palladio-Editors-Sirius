@@ -143,4 +143,15 @@
            top="/org.palladiosimulator.editors.sirius.assembly.custom/images/sink-role-top.svg">
      </image>
   </extension>
+  <extension
+        id="org.palladiosimulator.editors.sirius.assembly.custom.dataPort"
+        point="org.palladiosimulator.editors.sirius.custom.style.rotatableNode">
+     <image
+           bottom="/org.palladiosimulator.editors.sirius.assembly.custom/images/dataport-bottom.svg"
+           id="org.palladiosimulator.editors.sirius.assembly.custom.dataPort"
+           left="/org.palladiosimulator.editors.sirius.assembly.custom/images/dataport-left.svg"
+           right="/org.palladiosimulator.editors.sirius.assembly.custom/images/dataport-right.svg"
+           top="/org.palladiosimulator.editors.sirius.assembly.custom/images/dataport-top.svg">
+     </image>
+  </extension>
 </plugin>
